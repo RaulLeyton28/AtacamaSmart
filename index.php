@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>AtacamaSmart</title>
+	<title>AtacamaSmart - Este es un mensaje para probar Github</title>
 </head>
 	<link rel="shortcut icon" href="img/icono.png" type="image/x-icon">
 	<link rel="stylesheet" href="estilos.css">
