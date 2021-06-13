@@ -21,8 +21,8 @@
 		</section>
 		<div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
                 preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98
-                C150.00,150.00 394.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #08f;"></path></svg>/div>
-        </header>
+                C150.00,150.00 394.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg>/div>
+    </header>
         <main>
             <section class="contenedor sobre-nosotros">
                 <h2 class="titulo">NOSOTROS</h2>
@@ -36,33 +36,45 @@
                     </div>
                 </div>
             </section>
-            <section class="aplicacion">
+            <section class="portafolio">
                 <div class="contenedor">
-                    <h2 class="titulo">Aplicacion</h2>
-                    <div class="galeria-aplicacion"></div>
-                        <div class="imagen-apli">
-                            <img src="img/aplicacion1.jpg" alt="">
-                            <p>Agrega lugares fuera del mapa</p>
-                        </div>
-                        <div class="imagen-apli">
-                            <img src="img/aplicacion2.png" alt="">
-                            <p>Agrega tus lugares propios</p>
-                        </div>
-                        <div class="imagen-apli">
-                            <img src="img/aplicacion3.png" alt="">
-                            <p>Agregar Lugar</p>
-                        </div>
-                        <div class="imagen-apli">
-                            <img src="img/aplicacion4.jpg" alt="">
-                            <p>Agregar Lugar</p>
-                        </div>
+                    <h2 class="titulo">Aplicación</h2>
+                        <div class="galeria-port"></div>
+                            <div class="imagen-port">
+                                <img src="img/aplicacion1.jpg" alt="">
+                                    <div class="hover-galeria">
+                                        <img src="img/icono1.png" alt="">
+                                        <p>Agrega lugares fuera del mapa</p>
+                                    </div>                            
+                            </div>
+                            <div class="imagen-port">
+                                <img src="img/aplicacion2.png" alt="">
+                                <div class="hover-galeria">
+                                    <img src="img/icono1.png" alt="">
+                                        <p>Agréga tuslugares Propios</p>
+                                </div>
+                            </div>
+                            <div class="imagen-port">
+                                <img src="img/aplicacion3.png" alt="">
+                                <div class="hover-galeria">
+                                    <img src="img/icono1.png" alt="">
+                                        <p>Agrega lugares fuera del mapa</p>
+                                </div>
+                            </div>
+                            <div class="imagen-port">
+                                <img src="img/aplicacion4.jpg" alt="">
+                                <div class="hover-galeria">
+                                    <img src="img/icono1.png" alt="">
+                                    <p>Agrega lugares fuera del mapa</p>
+                                </div>
+                            </div>                    
                 </div>
             </section>
             <section class="formulario">
-                <h2 class="titulo">CONTACTANOS</h2>
+                <h4 class="titulo">CONTACTANOS</h4>
             	<div class="contenedor formulario">
             		<form action="">
-            			<h2>CONTACTO</h2>
+            			<h4>CONTACTO</h4>
             			<input type="text" name="Nombre" placeholder="Nombre">
             			<input type="text" name="Correo" placeholder="Correo">
             			<input type="text" name="Teléfono" placeholder="Teléfono">
@@ -72,10 +84,10 @@
             	</div>            	 
             </section>
             <section class="inicio">
-                <h2 class="titulo">INICIA SESIÓN SI POSEES UNA CUENTA</h2>
+                <h4 class="titulo">INICIA SESIÓN SI POSEES UNA CUENTA</h4>
                 <div class="contenedor iniciosesion">
                     <form action="">
-                        <h2>INICIA SESIÓN</h2>
+                        <h4>INICIA SESIÓN</h4>
                         <input type="text" name="Nombre de Usuario" placeholder="Ingresa tu Nombre de Usuario">
                         <input type="text" name="Contraseña" placeholder="Ingresa tu contraseña">
                         <input type="button" value="ENTRAR" id="boton">                        
