@@ -21,7 +21,7 @@
 		</section>
 		<div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
                 preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98
-                C150.00,150.00 394.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg>/div>
+                C150.00,150.00 394.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path></svg></div>
     </header>
         <main>
             <section class="contenedor sobre-nosotros">
@@ -37,42 +37,71 @@
                 </div>
             </section>
             <section class="portafolio">
-                <div class="contenedor">
-                    <h2 class="titulo">Aplicación</h2>
-                        <div class="galeria-port"></div>
-                            <div class="imagen-port">
-                                <img src="img/aplicacion1.jpg" alt="">
-                                    <div class="hover-galeria">
-                                        <img src="img/icono1.png" alt="">
-                                        <p>Agrega lugares fuera del mapa</p>
-                                    </div>                            
-                            </div>
-                            <div class="imagen-port">
-                                <img src="img/aplicacion2.png" alt="">
-                                <div class="hover-galeria">
-                                    <img src="img/icono1.png" alt="">
-                                        <p>Agréga tuslugares Propios</p>
-                                </div>
-                            </div>
-                            <div class="imagen-port">
-                                <img src="img/aplicacion3.png" alt="">
-                                <div class="hover-galeria">
-                                    <img src="img/icono1.png" alt="">
-                                        <p>Agrega lugares fuera del mapa</p>
-                                </div>
-                            </div>
-                            <div class="imagen-port">
-                                <img src="img/aplicacion4.jpg" alt="">
-                                <div class="hover-galeria">
-                                    <img src="img/icono1.png" alt="">
-                                    <p>Agrega lugares fuera del mapa</p>
-                                </div>
-                            </div>                    
+            <div class="contenedor">
+                <h2 class="titulo">Portafolio</h2>
+                <div class="galeria-port">
+                    <div class="imagen-port">
+                        <img src="img/aplicacion1.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/aplicacion2.png" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/aplicacion3.png" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/aplicacion4.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/aplicacion4.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/aplicacion4.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/aplicacion4.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="img/aplicacion4.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="img/icono1.png" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>                    
                 </div>
-            </section>
-            <section class="formulario">
-                <h4 class="titulo">CONTACTANOS</h4>
-            	<div class="contenedor formulario">
+            </div>
+        </section>
+            <section class="formulario">           
+                <h2 class="titulo">CONTACTANOS PARA RESOLVER TUS DUDAS</h2>     
+            	<div class="contenedor-formulario">
             		<form action="">
             			<h4>CONTACTO</h4>
             			<input type="text" name="Nombre" placeholder="Nombre">
@@ -83,15 +112,16 @@
             		</form>
             	</div>            	 
             </section>
-            <section class="inicio">
-                <h4 class="titulo">INICIA SESIÓN SI POSEES UNA CUENTA</h4>
-                <div class="contenedor iniciosesion">
-                    <form action="">
-                        <h4>INICIA SESIÓN</h4>
-                        <input type="text" name="Nombre de Usuario" placeholder="Ingresa tu Nombre de Usuario">
-                        <input type="text" name="Contraseña" placeholder="Ingresa tu contraseña">
-                        <input type="button" value="ENTRAR" id="boton">                        
-                    </form>
+            <section class="formulario">
+                <h2 class="titulo">INICIA SESIÓN PARA GESTIONAR TU TIENDA</h2>
+                <div class="contenedor-formulario">
+                    <p> Si usted no posee una cuenta de la aplicación "Atacama Smart" no podra iniciar sesión, primero debe descargar la aplicacion desde su movil y crear una cuenta, luego de eso podra iniciar sesión en este sitio web siempre y cuanto su cuenta sea de tipo Empresa </p>
+                        <form action="">
+                            <h4>INICIA SESIÓN</h4>
+                            <input type="text" name="Nombre de Usuario" placeholder="Ingresa tu Nombre de Usuario">
+                            <input type="text" name="Contraseña" placeholder="Ingresa tu contraseña">
+                            <input type="button" value="ENTRAR" id="boton"                       
+                        </form>
                 </div>
             </section>
         </main>
@@ -110,6 +140,6 @@
                     <p>A la vueta de la esquina #1562</p>
                 </div>
             </div>
-            <h2 class="titulo-final">&copy; Atacama Smart | Raúl Leyton</h2>
+            <h2 class="titulo-final">&copy; AtacamaSmart | Raúl Leyton</h2>
         </footer>
 </body>
