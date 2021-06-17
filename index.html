@@ -9,14 +9,14 @@
 <body>
 	<header>
 		<nav>
-			<a href="#">INICIO</a>
-			<a href="#">NOSOTROS</a>
-			<a href="#">APLICACION</a>
-			<a href="#">CONTACTO</a>
-			<a href="#">INICIAR SESIÓN</a>
+			<a href="#inicio">INICIO</a>
+			<a href="#nosotros">NOSOTROS</a>
+			<a href="#portafolio">PORTAFOLIO</a>
+			<a href="#contacto">CONTACTO</a>
+			<a href="#sesion">INICIAR SESIÓN</a>
 		</nav>
 		<section class="textos-header">
-			<h1>Disfruta Atacama Smart</h1>
+			<h1 id="inicio">Disfruta Atacama Smart</h1>
 			<h2>Conoce las maravillas ocultas</h2>
 		</section>
 		<div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
@@ -25,7 +25,7 @@
     </header>
         <main>
             <section class="contenedor sobre-nosotros">
-                <h2 class="titulo">NOSOTROS</h2>
+                <h2 id="nosotros" class="titulo">NOSOTROS</h2>
                 <div class="contenedor-sobre-nosotros">
                     <img src="img/equipo.jpg" alt="" class="imagen-about-us">
                     <div class="contenido-textos">
@@ -38,7 +38,7 @@
             </section>
             <section class="portafolio">
             <div class="contenedor">
-                <h2 class="titulo">Portafolio</h2>
+                <h2 id="portafolio"class="titulo">PORTAFOLIO</h2>
                 <div class="galeria-port">
                     <div class="imagen-port">
                         <img src="img/aplicacion1.jpg" alt="">
@@ -100,26 +100,26 @@
             </div>
         </section>
             <section class="formulario">           
-                <h2 class="titulo">CONTACTANOS PARA RESOLVER TUS DUDAS</h2>     
+                <h2 id="contacto"class="titulo">CONTACTANOS PARA RESOLVER TUS DUDAS</h2>    
             	<div class="contenedor-formulario">
-            		<form action="">
+            		<form action="enviar.php" method="post">
             			<h4>CONTACTO</h4>
-            			<input type="text" name="Nombre" placeholder="Nombre">
-            			<input type="text" name="Correo" placeholder="Correo">
-            			<input type="text" name="Teléfono" placeholder="Teléfono">
-            			<textarea name="mensaje" placeholder="Escriba aquí su mensaje"></textarea>
-            			<input type="button" value="ENVIAR" id="boton">
+            			<input type="text" name="nombre" placeholder="Nombre" required>
+            			<input type="text" name="correo" placeholder="Correo" required>
+            			<input type="text" name="telefono" placeholder="Teléfono" required>
+            			<textarea name="mensaje" placeholder="Escriba aquí su mensaje" required></textarea>
+            			<input type="submit" value="ENVIAR" id="boton">
             		</form>
             	</div>            	 
             </section>
             <section class="formulario">
-                <h2 class="titulo">INICIA SESIÓN PARA GESTIONAR TU TIENDA</h2>
+                <h2 id="sesion"class="titulo">INICIA SESIÓN PARA GESTIONAR TU TIENDA</h2>
                 <div class="contenedor-formulario">
                     <p> Si usted no posee una cuenta de la aplicación "Atacama Smart" no podra iniciar sesión, primero debe descargar la aplicacion desde su movil y crear una cuenta, luego de eso podra iniciar sesión en este sitio web siempre y cuanto su cuenta sea de tipo Empresa </p>
                         <form action="">
                             <h4>INICIA SESIÓN</h4>
-                            <input type="text" name="Nombre de Usuario" placeholder="Ingresa tu Nombre de Usuario">
-                            <input type="text" name="Contraseña" placeholder="Ingresa tu contraseña">
+                            <input type="text" name="Nombre de Usuario" placeholder="Ingresa tu Nombre de Usuario" required>
+                            <input type="text" name="Contraseña" placeholder="Ingresa tu contraseña" required>
                             <input type="button" value="ENTRAR" id="boton"                       
                         </form>
                 </div>
