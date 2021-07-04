@@ -1,10 +1,8 @@
 <?php 
     include("conexion.php");
     $con=conectar();
-
-    $sql="SELECT *  FROM producto";
+    $sql="SELECT * FROM producto";
     $query=mysqli_query($con,$sql);
-
     $row=mysqli_fetch_array($query);
 ?>
 <!DOCTYPE html>
@@ -38,11 +36,11 @@
                             <h1>Ingrese datos</h1>
                                 <form action="insertar.php" method="POST">
 
-                                    <input type="text" class="form-control mb-3" name="id_producto" placeholder="ID Producto" required="">
-                                    <input type="text" class="form-control mb-3" name="id_negocio" placeholder="ID Negocio" required="">
-                                    <input type="text" class="form-control mb-3" name="nombre_producto" placeholder="Nombre Producto" required="">
-                                    <input type="text" class="form-control mb-3" name="cantidad_disponible" placeholder="Cantidad Disponible" required="">
-                                    <input type="text" class="form-control mb-3" name="precio_unidad" placeholder="Precio Unitario" required="">
+                                    <input type="text" class="form-control mb-3" name="id_producto" placeholder="ID Producto" required>
+                                    <input type="text" class="form-control mb-3" name="id_negocio" placeholder="ID Negocio" required>
+                                    <input type="text" class="form-control mb-3" name="nombre_producto" placeholder="Nombre Producto" required>
+                                    <input type="text" class="form-control mb-3" name="cantidad_disponible" placeholder="Cantidad Disponible" required>
+                                    <input type="text" class="form-control mb-3" name="precio_unidad" placeholder="Precio Unitario" required>
                                     
                                     <input type="submit" class="btn btn-primary">
                                 </form>

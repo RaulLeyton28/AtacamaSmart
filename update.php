@@ -9,10 +9,11 @@ $nombre_producto=$_POST['nombre_producto'];
 $cantidad_disponible=$_POST['cantidad_disponible'];
 $precio_unidad=$_POST['precio_unidad'];
 
-$sql="UPDATE producto SET  id_producto='$id_producto',id_negocio='$id_negocio',nombre_producto='$nombre_producto',cantidad_disponible='$cantidad_disponible' WHERE id_producto='$id_producto'";
+$sql="UPDATE producto SET  nombre_producto='$nombre_producto',cantidad_disponible='$cantidad_disponible',precio_unidad='$precio_unidad' WHERE id_producto='$id_producto'";
 $query=mysqli_query($con,$sql);
 
     if($query){
         Header("Location: home.php");
     }
 ?>
+
