@@ -4,7 +4,7 @@
 
 $id=$_GET['id'];
 
-$sql="SELECT * FROM producto WHERE id_producto='$id'";
+$sql="SELECT * FROM producto WHERE idproducto='$id'";
 $query=mysqli_query($con,$sql);
 
 $row=mysqli_fetch_array($query);
@@ -23,15 +23,12 @@ $row=mysqli_fetch_array($query);
     </head>
     <body>
                 <div class="container mt-5">
-                    <form action="update.php" method="POST">
+                    <form action="update.php?ids=<?PHP echo $id; ?>" method="POST">
                     
-                                <input type="hidden" name="id_producto" value="<?php echo $row['id_producto']  ?>">
-
-                                <input type="hidden" name="id_negocio" value="<?php echo $row['id_negocio']  ?>">
                                 
-                                <input type="text" class="form-control mb-3" name="nombre_producto" placeholder="Nombre" value="<?php echo $row['nombre_producto']  ?>">
-                                <input type="text" class="form-control mb-3" name="cantidad_disponible" placeholder="cantidad_disponible" value="<?php echo $row['cantidad_disponible']  ?>">
-                                <input type="text" class="form-control mb-3" name="precio_unidad" placeholder="Precio Unidad" value="<?php echo $row['precio_unidad']  ?>">
+                                <input type="text" class="form-control mb-3" name="nombre_producto" placeholder="Nombre" value="<?php echo $row['nombre']  ?>">
+                                <input type="text" class="form-control mb-3" name="cantidad_disponible" placeholder="cantidad" value="<?php echo $row['cantidad']  ?>">
+                                <input type="text" class="form-control mb-3" name="precio_unidad" placeholder="Precio Unidad" value="<?php echo $row['precio']  ?>">
                                 
                             <input type="submit" class="btn btn-primary btn-block" value="Actualizar">
                     </form>

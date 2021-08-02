@@ -1,9 +1,59 @@
 <?php 
-    include("conexion.php");
-    $con=conectar();
-    $sql="SELECT * FROM producto";
-    $query=mysqli_query($con,$sql);
-    $row=mysqli_fetch_array($query);
+    include("conexion2.php");
+    include("conexion1.php");
+ session_start();
+
+    if(!isset($_SESSION['num_rut'])){
+
+        header("location: sesion.html");
+    }
+
+
+
+   
+
+    // $con=conectar();
+  
+$num_ruts=$_SESSION['num_rut'];
+
+    $ret1=mysqli_query($con,"select * from usuario where rut='$num_ruts'");
+    while($row2=mysqli_fetch_array($ret1)){
+    
+        $nombre=$row2['nombre'];
+        $apellido=$row2['apellido'];
+    }
+
+
+    $ret=mysqli_query($con,"select * from negocio where usuario_rut='$num_ruts'");
+    while($row1=mysqli_fetch_array($ret)){
+    
+        $idnegocio=$row1['idnegocio'];
+
+        $name_neg=$row1['nombre'];
+
+    }
+
+
+    // $sql02=mysqli_query($conexion1,"select * from negocio where usuario_rut='$num_ruts'");
+
+    // while($row=mysqli_fetch_array($sql02))
+    //                         {
+    //                             $idnegocio=$row['idnegocio'];
+    //                         }
+
+
+    // $sql1="select * from negocio where usuario_rut='$num_ruts'";
+    // $query=mysqli_query($conexion,$sql1);
+    // $row1=mysqli_fetch_array($query);
+
+
+    // $sql="SELECT * FROM producto WHERE negocio_idnegocio='$idnegocio'";
+    // $query=mysqli_query($conexion1,$sql);
+    // $row=mysqli_fetch_array($query);
+
+$eventosHistoricos=$conexion->query("SELECT * FROM producto where negocio_idnegocio='$idnegocio'");
+                            
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,11 +69,11 @@
     <body>
         <header>
             <nav>
-                <a href="sesion.html">Cerrar Sesión</a>
+                <a href="cerrarSesion.php">Cerrar Sesión</a>
             </nav>
         <section class="textos-header">
-            <h1>Bienvenido Usuario : </h1>   
-            <h2>Administra tu negocio :</h2>        
+            <h1>Bienvenido Usuario : <?php echo $nombre; ?> <?php echo $apellido; ?></h1>   
+            <h2>Administra tu negocio : <?php echo $name_neg; ?></h2>        
         </section>
             <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150"
                 preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98
@@ -36,11 +86,10 @@
                             <h1>Ingrese datos</h1>
                                 <form action="insertar.php" method="POST">
 
-                                    <input type="text" class="form-control mb-3" name="id_producto" placeholder="ID Producto" required>
-                                    <input type="text" class="form-control mb-3" name="id_negocio" placeholder="ID Negocio" required>
-                                    <input type="text" class="form-control mb-3" name="nombre_producto" placeholder="Nombre Producto" required>
-                                    <input type="text" class="form-control mb-3" name="cantidad_disponible" placeholder="Cantidad Disponible" required>
-                                    <input type="text" class="form-control mb-3" name="precio_unidad" placeholder="Precio Unitario" required>
+                                   
+                                    <input type="text" class="form-control mb-3" name="nombre" placeholder="Nombre Producto" required>
+                                    <input type="text" class="form-control mb-3" name="cantidad" placeholder="Cantidad Disponible" required>
+                                    <input type="text" class="form-control mb-3" name="precio" placeholder="Precio Unitario" required>
                                     
                                     <input type="submit" class="btn btn-primary">
                                 </form>
@@ -50,8 +99,9 @@
                             <table class="table" >
                                 <thead class="table-success table-striped" >
                                     <tr>
-                                        <th>ID</th>
-                                        <th>ID NEGOCIO</th>
+                                        <th>#</th>
+                                        
+                                        
                                         <th>NOMBRE</th>
                                         <th>CANTIDAD</th>
                                         <th>PRECIO</th>
@@ -61,19 +111,24 @@
                                 </thead>
                                 <tbody>
                                         <?php
-                                            while($row=mysqli_fetch_array($query)){
+$cont=1;
+                                            while($row = $eventosHistoricos->fetch(PDO::FETCH_ASSOC)){
+
+                                        
+                                            // while($row=mysqli_fetch_array($query)){
                                         ?>
                                             <tr>
-                                                <th><?php  echo $row['id_producto']?></th>
-                                                <th><?php  echo $row['id_negocio']?></th>
-                                                <th><?php  echo $row['nombre_producto']?></th>
-                                                <th><?php  echo $row['cantidad_disponible']?></th>
-                                                <th><?php  echo $row['precio_unidad']?></th>    
-                                                <th><a href="actualizar.php?id=<?php echo $row['id_producto'] ?>" class="btn btn-info">Editar</a></th>
-                                                <th><a href="delete.php?id=<?php echo $row['id_producto'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
+                                                <th><?php  echo $cont; ?></th>
+                                                
+                                                
+                                                <th><?php  echo $row['nombre']?></th>
+                                                <th><?php  echo $row['cantidad']?></th>
+                                                <th><?php  echo $row['precio']?></th>    
+                                                <th><a href="actualizar.php?id=<?php echo $row['idproducto'] ?>" class="btn btn-info">Editar</a></th>
+                                                <th><a href="delete.php?id=<?php echo $row['idproducto'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
                                             </tr>
                                         <?php 
-                                            }
+                                           $cont++; }
                                         ?>
                                 </tbody>
                             </table>

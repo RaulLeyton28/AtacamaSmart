@@ -1,20 +1,49 @@
 <?php
 include("conexion.php");
-$con=conectar();
-
-$id_producto=$_POST['id_producto'];
-$id_negocio=$_POST['id_negocio'];
-$nombre_producto=$_POST['nombre_producto'];
-$cantidad_disponible=$_POST['cantidad_disponible'];
-$precio_unidad=$_POST['precio_unidad'];
+include("conexion2.php");
+include("conexion1.php");
+// $con=conectar();
 
 
-$sql="INSERT INTO producto VALUES('$id_producto','$id_negocio','$nombre_producto','$cantidad_disponible','$precio_unidad')";
-$query= mysqli_query($con,$sql);
+    session_start();
 
-if($query){
-    Header("Location: home.php");
+  
+$num_ruts=$_SESSION['num_rut'];
+
+
+
+    $ret=mysqli_query($con,"select * from negocio where usuario_rut='$num_ruts'");
+    while($row1=mysqli_fetch_array($ret)){
     
-}else {
-}
+        $idnegocio=$row1['idnegocio'];
+
+    }
+
+
+
+
+
+
+  $stmt = $conexion->prepare("INSERT INTO producto ( nombre, cantidad, precio, negocio_idnegocio)
+    VALUE (:nombre, :cantidad, :precio, :negocio_idnegocio)");
+    $stmt->bindParam(':nombre', $nombre);
+    $stmt->bindParam(':cantidad', $cantidad);
+    $stmt->bindParam(':precio', $precio);
+    $stmt->bindParam(':negocio_idnegocio', $negocio_idnegocio);  
+    //insertar filas
+    $nombre= $_POST["nombre"];
+    $cantidad=$_POST["cantidad"];
+    $precio= $_POST["precio"];
+    $negocio_idnegocio= $idnegocio;
+    $stmt->execute();
+
+ Header("Location: home.php");
+// $sql="INSERT INTO producto VALUES('$nombre','$cantidad','$precio','$idnegocio')";
+// $query= mysqli_query($con,$sql);
+
+// if($query){
+//     Header("Location: home.php");
+    
+// }else {
+// }
 ?>

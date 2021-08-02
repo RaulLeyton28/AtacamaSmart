@@ -4,7 +4,7 @@
 		$user="root";
 		$pass="";
 
-		$bd="db.php";
+		$bd="bd_atacama";
 
 		$con=mysqli_connect($host,$user,$pass);
 

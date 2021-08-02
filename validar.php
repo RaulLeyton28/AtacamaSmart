@@ -1,18 +1,22 @@
 <?php
-	include('db.php');
-	$usuario=$_POST['usuario'];
-	$contraseña=$_POST['contraseña'];
+	include('conexion.php');
+	include('conexion1.php');
+	$conexion=mysqli_connect("localhost","root","","bd_atacama");
+	$rut=$_POST['rut'];
+	$clave=$_POST['clave'];
 	session_start();
-	$_SESSION['usuario']=$usuario;
 
-	$conexion=mysqli_connect("localhost","root","","db.php");
 
-	$consulta="SELECT*FROM usuario where usuario='$usuario' and contraseña='$contraseña'";
+	$consulta="SELECT*FROM usuario where rut='$rut' and clave='$clave'";
 	$resultado=mysqli_query($conexion,$consulta);
 
 	$filas=mysqli_num_rows($resultado);
 
 	if($filas){
+		
+
+		$_SESSION['num_rut'] = $rut;
+
 		header("location:home.php");
 	}else{
 		?>
